@@ -1,0 +1,4 @@
+- calibrar com xadrez diferentes distancias
+- testar com HD OK20220810
+- alterar parametros da camera (intelbras, os que mudam no acesos ao IP) para diminuir latência HD
+- implementar método do trapézio
