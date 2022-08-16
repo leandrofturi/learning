@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/lume/Documents/learning/ffmpeg/simple.cpp
+cstdio
+-
+iostream
+-
+memory
+-
+stdexcept
+-
+string
+-
+array
+-
+
