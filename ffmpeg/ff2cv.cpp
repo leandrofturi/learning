@@ -22,7 +22,7 @@ int main(int argc, char* argv[])
     const char* infile = argv[1];
 
     // initialize FFmpeg library
-    av_register_all();
+    // av_register_all();
 //  av_log_set_level(AV_LOG_DEBUG);
     int ret;
 
