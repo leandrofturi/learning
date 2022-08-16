@@ -19,10 +19,6 @@ vector
 -
 iostream
 -
-dict_4x4.hpp
-/home/lume/Documents/learning/charuco_diamond/dict_4x4.hpp
-
-/home/lume/Documents/learning/charuco_diamond/dict_4x4.hpp
 
 /usr/local/include/opencv4/opencv2/aruco.hpp
 opencv2/core.hpp

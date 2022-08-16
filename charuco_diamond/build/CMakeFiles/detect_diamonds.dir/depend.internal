@@ -3,7 +3,6 @@
 
 CMakeFiles/detect_diamonds.dir/detect_diamonds.cpp.o
  /home/lume/Documents/learning/charuco_diamond/detect_diamonds.cpp
- /home/lume/Documents/learning/charuco_diamond/dict_4x4.hpp
  /usr/local/include/opencv4/opencv2/aruco.hpp
  /usr/local/include/opencv4/opencv2/aruco/charuco.hpp
  /usr/local/include/opencv4/opencv2/aruco/dictionary.hpp
