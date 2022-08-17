@@ -1,5 +1,0 @@
-/home/lume/Documents/learning/ffmpeg/build/CMakeFiles/rebuild_cache.dir
-/home/lume/Documents/learning/ffmpeg/build/CMakeFiles/ff2cv.dir
-/home/lume/Documents/learning/ffmpeg/build/CMakeFiles/simple.dir
-/home/lume/Documents/learning/ffmpeg/build/CMakeFiles/edit_cache.dir
-/home/lume/Documents/learning/ffmpeg/build/CMakeFiles/opencv.dir

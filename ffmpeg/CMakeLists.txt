@@ -14,7 +14,9 @@ pkg_check_modules(LIBAV REQUIRED IMPORTED_TARGET
 add_executable(opencv    opencv.cpp)
 add_executable(simple    simple.cpp)
 add_executable(ff2cv     ff2cv.cpp)
+add_executable(ff2cv_     ff2cv_.cpp)
 
 target_link_libraries(opencv    opencv_highgui)
 target_link_libraries(simple    opencv_highgui)
 target_link_libraries(ff2cv     opencv_highgui PkgConfig::LIBAV)
+target_link_libraries(ff2cv_     opencv_highgui PkgConfig::LIBAV)

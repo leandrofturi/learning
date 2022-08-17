@@ -1,0 +1,7 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory '/home/lume/Documents/learning/ffmpeg'
+g++    -c -o ff2cv_split.o ff2cv_split.cpp
+g++ -o run ff2cv_split.o -lm -w `pkg-config --cflags opencv` `pkg-config --libs opencv libswresample libavformat libavcodec libswscale libavutil`
+rm -f *.o
+make: Leaving directory '/home/lume/Documents/learning/ffmpeg'
+ 

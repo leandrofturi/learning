@@ -1,7 +1,6 @@
-make --dry-run --keep-going --print-directory
+make --dry-run --always-make --keep-going --print-directory
 make: Entering directory '/home/lume/Documents/learning'
-rm -f *.o
 make: Leaving directory '/home/lume/Documents/learning'
  
-make: *** No rule to make target 'ff2cv.o', needed by 'run'.
+make: *** No targets specified and no makefile found.  Stop.
 

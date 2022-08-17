@@ -15,14 +15,10 @@ extern "C" {
 
 int main(int argc, char* argv[])
 {
-    if (argc < 2) {
-        std::cout << "Usage: ff2cv <infile>" << std::endl;
-        return 1;
-    }
-    const char* infile = argv[1];
+    const char* infile = "rtsp://admin:1q2w3e4r@192.168.1.114:554/cam/realmonitor?channel=1&subtype=0";
 
     // initialize FFmpeg library
-    // av_register_all();
+    av_register_all();
 //  av_log_set_level(AV_LOG_DEBUG);
     int ret;
 
