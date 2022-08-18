@@ -1,5 +1,0 @@
-/home/lume/Documents/learning/charuco_diamond/build/CMakeFiles/rebuild_cache.dir
-/home/lume/Documents/learning/charuco_diamond/build/CMakeFiles/edit_cache.dir
-/home/lume/Documents/learning/charuco_diamond/build/CMakeFiles/detect_diamonds.dir
-/home/lume/Documents/learning/charuco_diamond/build/CMakeFiles/create_diamond.dir
-/home/lume/Documents/learning/charuco_diamond/build/CMakeFiles/create_checkerboard.dir

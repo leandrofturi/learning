@@ -1,0 +1,5 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory '/home/lume/Documents/learning/charuco_diamond'
+rm -f *.o
+make: Leaving directory '/home/lume/Documents/learning/charuco_diamond'
+ 

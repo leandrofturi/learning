@@ -4,6 +4,8 @@
 #include <opencv2/aruco/charuco.hpp>
 #include <vector>
 #include <iostream>
+#include "utils_aruco.hpp"
+
 
 using namespace std;
 using namespace cv;
@@ -13,12 +15,12 @@ int main(int argc, char *argv[])
 {
     float squareLength = 0.48; // Square side length (in meters)
     float markerLength = 0.3;  // Marker side length (in meters)
-    string camId = "rtsp://admin:1q2w3e4r@192.168.1.114:554/cam/realmonitor?channel=1&subtype=0";
+    string camId = 0;// "rtsp://admin:1q2w3e4r@192.168.1.114:554/cam/realmonitor?channel=1&subtype=0";
 
     // https://docs.opencv.org/4.x/d1/dcd/structcv_1_1aruco_1_1DetectorParameters.html
     Ptr<aruco::DetectorParameters> detectorParams;
     FileStorage fs("../detector_params.yml", FileStorage::READ);
-    cout << "readDetectorParameters: " << aruco::DetectorParameters::readDetectorParameters(fs.root(), detectorParams) << endl;
+    cout << "readDetectorParameters: " << readDetectorParameters(fs.root(), detectorParams) << endl;
 
     // https://docs.opencv.org/3.4/d9/d6a/group__aruco.html
     Ptr<aruco::Dictionary> dictionary;
@@ -143,7 +145,7 @@ int main(int argc, char *argv[])
             aruco::drawDetectedMarkers(imageCopy, rejectedMarkers, noArray(), Scalar(255, 0, 255));
         }
 
-        int rvecsize = rvecs.size();
+        size_t rvecsize = rvecs.size();
         if (diamondIdSize > 0)
         {
             aruco::drawDetectedDiamonds(imageCopy, diamondCorners, diamondIds);
@@ -157,8 +159,8 @@ int main(int argc, char *argv[])
         {
             aruco::drawAxis(imageCopy, camMatrix, distCoeffs, rvecs[i], tvecs[i],
                             squareLength * 0.5f);
-            rvecMean += rvecs[i] / rvecsize;
-            tvecMean += tvecs[i] / rvecsize;
+            rvecMean += rvecs[i] / (int) rvecsize;
+            tvecMean += tvecs[i] / (int) rvecsize;
         }
 
         for (i = 0; i < rvecsize; i++)
@@ -166,8 +168,8 @@ int main(int argc, char *argv[])
             rvecStd += (rvecs[i] - rvecMean).mul(rvecs[i] - rvecMean);
             tvecStd += (tvecs[i] - tvecMean).mul(tvecs[i] - tvecMean);
         }
-        sqrt((rvecStd / rvecsize), rvecStd);
-        sqrt((tvecStd / rvecsize), tvecStd);
+        sqrt((rvecStd / (int) rvecsize), rvecStd);
+        sqrt((tvecStd / (int) rvecsize), tvecStd);
 
         rvecMean = rvecMean * 57.2958;
         cout << rvecMean << "std: " << rvecStd << endl;
