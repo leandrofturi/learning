@@ -6,19 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/lume/Documents/learning/test/markermap.h
-opencv2/opencv.hpp
--
-aruco/aruco.h
--
-
-/home/lume/Documents/learning/test/mmain.cpp
+/home/lume/Documents/learning/test/detect.cpp
 sl/Camera.hpp
 -
 opencv2/opencv.hpp
 -
-markermap.h
-/home/lume/Documents/learning/test/markermap.h
+aruco/aruco.h
+-
+bitset
+-
 
 /usr/local/cuda-11.0/include/builtin_types.h
 device_types.h

@@ -111,71 +111,84 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named main
+# Target rules for targets named detect
 
 # Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 main
-.PHONY : main
+detect: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 detect
+.PHONY : detect
 
 # fast build rule for target.
-main/fast:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-.PHONY : main/fast
+detect/fast:
+	$(MAKE) -f CMakeFiles/detect.dir/build.make CMakeFiles/detect.dir/build
+.PHONY : detect/fast
 
-markermap.o: markermap.cpp.o
+#=============================================================================
+# Target rules for targets named create
 
-.PHONY : markermap.o
+# Build rule for target.
+create: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 create
+.PHONY : create
 
-# target to build an object file
-markermap.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/markermap.cpp.o
-.PHONY : markermap.cpp.o
+# fast build rule for target.
+create/fast:
+	$(MAKE) -f CMakeFiles/create.dir/build.make CMakeFiles/create.dir/build
+.PHONY : create/fast
 
-markermap.i: markermap.cpp.i
+create.o: create.cpp.o
 
-.PHONY : markermap.i
-
-# target to preprocess a source file
-markermap.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/markermap.cpp.i
-.PHONY : markermap.cpp.i
-
-markermap.s: markermap.cpp.s
-
-.PHONY : markermap.s
-
-# target to generate assembly for a file
-markermap.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/markermap.cpp.s
-.PHONY : markermap.cpp.s
-
-mmain.o: mmain.cpp.o
-
-.PHONY : mmain.o
+.PHONY : create.o
 
 # target to build an object file
-mmain.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/mmain.cpp.o
-.PHONY : mmain.cpp.o
+create.cpp.o:
+	$(MAKE) -f CMakeFiles/create.dir/build.make CMakeFiles/create.dir/create.cpp.o
+.PHONY : create.cpp.o
 
-mmain.i: mmain.cpp.i
+create.i: create.cpp.i
 
-.PHONY : mmain.i
+.PHONY : create.i
 
 # target to preprocess a source file
-mmain.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/mmain.cpp.i
-.PHONY : mmain.cpp.i
+create.cpp.i:
+	$(MAKE) -f CMakeFiles/create.dir/build.make CMakeFiles/create.dir/create.cpp.i
+.PHONY : create.cpp.i
 
-mmain.s: mmain.cpp.s
+create.s: create.cpp.s
 
-.PHONY : mmain.s
+.PHONY : create.s
 
 # target to generate assembly for a file
-mmain.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/mmain.cpp.s
-.PHONY : mmain.cpp.s
+create.cpp.s:
+	$(MAKE) -f CMakeFiles/create.dir/build.make CMakeFiles/create.dir/create.cpp.s
+.PHONY : create.cpp.s
+
+detect.o: detect.cpp.o
+
+.PHONY : detect.o
+
+# target to build an object file
+detect.cpp.o:
+	$(MAKE) -f CMakeFiles/detect.dir/build.make CMakeFiles/detect.dir/detect.cpp.o
+.PHONY : detect.cpp.o
+
+detect.i: detect.cpp.i
+
+.PHONY : detect.i
+
+# target to preprocess a source file
+detect.cpp.i:
+	$(MAKE) -f CMakeFiles/detect.dir/build.make CMakeFiles/detect.dir/detect.cpp.i
+.PHONY : detect.cpp.i
+
+detect.s: detect.cpp.s
+
+.PHONY : detect.s
+
+# target to generate assembly for a file
+detect.cpp.s:
+	$(MAKE) -f CMakeFiles/detect.dir/build.make CMakeFiles/detect.dir/detect.cpp.s
+.PHONY : detect.cpp.s
 
 # Help Target
 help:
@@ -185,13 +198,14 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... main"
-	@echo "... markermap.o"
-	@echo "... markermap.i"
-	@echo "... markermap.s"
-	@echo "... mmain.o"
-	@echo "... mmain.i"
-	@echo "... mmain.s"
+	@echo "... detect"
+	@echo "... create"
+	@echo "... create.o"
+	@echo "... create.i"
+	@echo "... create.s"
+	@echo "... detect.o"
+	@echo "... detect.i"
+	@echo "... detect.s"
 .PHONY : help
 
 

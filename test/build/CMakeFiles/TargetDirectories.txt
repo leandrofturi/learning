@@ -1,3 +1,4 @@
 /home/lume/Documents/learning/test/build/CMakeFiles/rebuild_cache.dir
 /home/lume/Documents/learning/test/build/CMakeFiles/edit_cache.dir
-/home/lume/Documents/learning/test/build/CMakeFiles/main.dir
+/home/lume/Documents/learning/test/build/CMakeFiles/detect.dir
+/home/lume/Documents/learning/test/build/CMakeFiles/create.dir

@@ -4,8 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/lume/Documents/learning/test/markermap.cpp" "/home/lume/Documents/learning/test/build/CMakeFiles/main.dir/markermap.cpp.o"
-  "/home/lume/Documents/learning/test/mmain.cpp" "/home/lume/Documents/learning/test/build/CMakeFiles/main.dir/mmain.cpp.o"
+  "/home/lume/Documents/learning/test/detect.cpp" "/home/lume/Documents/learning/test/build/CMakeFiles/detect.dir/detect.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

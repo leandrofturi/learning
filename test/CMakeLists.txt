@@ -11,6 +11,8 @@ include_directories(${ZED_INCLUDE_DIRS})
 find_package(OpenCV REQUIRED)
 find_package(aruco REQUIRED)
 
-add_executable(main mmain.cpp markermap.cpp markermap.h)
+add_executable(create create.cpp)
+add_executable(detect detect.cpp)
 
-target_link_libraries(main aruco opencv_highgui opencv_calib3d ${ZED_LIBRARIES} ${SPECIAL_OS_LIBS} ${CUDA_LIBRARIES} ${CUDA_npps_LIBRARY} ${CUDA_nppi_LIBRARY})
+target_link_libraries(create aruco opencv_highgui opencv_calib3d ${ZED_LIBRARIES} ${SPECIAL_OS_LIBS} ${CUDA_LIBRARIES} ${CUDA_npps_LIBRARY} ${CUDA_nppi_LIBRARY})
+target_link_libraries(detect aruco opencv_highgui opencv_calib3d ${ZED_LIBRARIES} ${SPECIAL_OS_LIBS} ${CUDA_LIBRARIES} ${CUDA_npps_LIBRARY} ${CUDA_nppi_LIBRARY})

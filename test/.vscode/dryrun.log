@@ -1,7 +1,0 @@
-make --dry-run --keep-going --print-directory
-make: Entering directory '/home/lume/Documents/learning/test'
-g++ -c diamond.cpp dmain.cpp -Wall -g `pkg-config --cflags opencv` -I/usr/local/cuda/include/ -I/usr/local/zed/include
-g++ -o main *.o -Wall -g `pkg-config --cflags opencv` -I/usr/local/cuda/include/ -I/usr/local/zed/include -lm -pthread `pkg-config --libs opencv` -L/usr/local/cuda/lib64 -lcuda -lcudart -lcublas -lcurand -L/usr/local/zed/lib -lsl_zed
-rm *.o
-make: Leaving directory '/home/lume/Documents/learning/test'
- 

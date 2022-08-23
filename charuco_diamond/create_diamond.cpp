@@ -19,6 +19,7 @@ static unsigned char DICT_BYTES[][4][4] = {
         {232, 66, 16, 1},
         {248, 33, 8, 0},
     }};
+    
 
 /*
 ./create_diamond "../diamond.jpg"
