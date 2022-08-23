@@ -3,8 +3,8 @@ CFLAGS = -Wall -g
 LDFLAGS = -lm -pthread
 
 # aruco
-#CFLAGS += `pkg-config --cflags aruco`
-#LDFLAGS += `pkg-config --libs aruco`
+CFLAGS += `pkg-config --cflags aruco`
+LDFLAGS += `pkg-config --libs aruco`
 
 # opencv 
 CFLAGS += `pkg-config --cflags opencv`
@@ -20,12 +20,12 @@ LDFLAGS += -L/usr/local/zed/lib -lsl_zed
 
 # deps
 DEPS = $(wildcard *.h) $(wildcard *.hpp)
+OBJS = detect
 
-all: 
-	g++ -c diamond.cpp dmain.cpp $(CFLAGS)
-	g++ -o main *.o $(CFLAGS) $(LDFLAGS)
-	rm *.o
+all: $(OBJS) clean
 
+$(OBJS): %: %.cpp $(DEPS)
+	$(CC) $(CFLAGS) -o $@ $< $(CFLAGS) $(LDFLAGS)
 
 clean:
 	rm -f *.o
