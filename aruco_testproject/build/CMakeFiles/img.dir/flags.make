@@ -6,5 +6,5 @@ CXX_FLAGS =
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/usr/local/include/aruco -isystem /usr/local/include/opencv4 
+CXX_INCLUDES = -I/usr/local/cuda-11.0/include -I/usr/local/zed/include -I/usr/local/include/aruco -isystem /usr/local/include/opencv4 
 

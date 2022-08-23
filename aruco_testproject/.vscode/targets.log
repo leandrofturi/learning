@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Aug 11 11:11:22 2022
+# Make data base, printed on Mon Aug 22 15:50:03 2022
 
 # Variables
 
@@ -39,7 +39,7 @@ XAUTHORITY = /run/user/1000/gdm/Xauthority
 # environment
 GDMSESSION = ubuntu
 # environment
-XMODIFIERS = @im
+XMODIFIERS = @im=ibus
 # makefile
 CURDIR := /home/lume/Documents/learning/aruco_testproject
 # makefile
@@ -47,11 +47,11 @@ SHELL = /bin/sh
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
-_ = /usr/bin/printenv
+_ = /usr/share/code/code
 # environment
 GOOGLE_APPLICATION_CREDENTIALS = /home/lume/credentials/voice_interface_credentials.json
 # environment
-JOURNAL_STREAM = 8:47943
+JOURNAL_STREAM = 8:46002
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # environment
@@ -73,13 +73,13 @@ MANDATORY_PATH = /usr/share/gconf/ubuntu.mandatory.path
 # environment
 XDG_DATA_DIRS = /usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
 # environment
-DBUS_SESSION_BUS_ADDRESS = unix:path
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
 # environment
 LC_CTYPE = pt_BR.UTF-8
 # environment
 SYSTEM = linux
 # environment
-MANAGERPID = 2318
+MANAGERPID = 2276
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
@@ -89,13 +89,13 @@ VSCODE_CWD = /home/lume
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
-PATH = /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/cuda-11.0/bin:/usr/lib/jvm/java-17-oracle:/usr/lib/jvm/java-17-oracle/bin:/usr/lib/jvm/java-17-oracle/db/bin:/usr/lib/jvm/java-17-oracle/bin:/usr/lib/jvm/java-17-oracle/db/bin:/home/lume/carmen_lcad/bin:/home/lume/MAE/bin:/usr/local/cuda/bin:/home/lume/MAE/bin:/home/lume/AMPL/ampl.linux-intel64:/home/lume/carmen_lcad/bin:/home/lume/MAE/bin:/usr/local/cuda/bin:/home/lume/MAE/bin:/home/lume/AMPL/ampl.linux-intel64
+PATH = /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/cuda-11.0/bin:/usr/lib/jvm/java-17-oracle:/usr/lib/jvm/java-17-oracle/bin:/usr/lib/jvm/java-17-oracle/db/bin:/usr/lib/jvm/java-17-oracle/bin:/usr/lib/jvm/java-17-oracle/db/bin:/home/lume/carmen_lcad/bin:/home/lume/MAE/bin:/usr/local/cuda/bin:/home/lume/MAE/bin:/home/lume/AMPL/ampl.linux-intel64
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
 GJS_DEBUG_OUTPUT = stderr
 # environment
-SESSION_MANAGER = local/lume-h1:@/tmp/.ICE-unix/2582,unix/lume-h1:/tmp/.ICE-unix/2582
+SESSION_MANAGER = local/lume-h1:@/tmp/.ICE-unix/2544,unix/lume-h1:/tmp/.ICE-unix/2544
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -103,17 +103,17 @@ XDG_MENU_PREFIX = gnome-
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = 04c7a04aef6a45709bd95eda9cdc2100
+INVOCATION_ID = 295e947ccac44341bc2e93b918c0605f
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
-LS_COLORS = rs
+LS_COLORS = 
 # environment
 XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 4118
+GIO_LAUNCHED_DESKTOP_FILE_PID = 3346
 # automatic
 %F = $(notdir $%)
 # environment
@@ -125,9 +125,9 @@ CUDA_LIBS = /usr/local/cuda/lib64
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 2544
+SSH_AGENT_PID = 2507
 # environment
-PKG_CONFIG_PATH = :/usr/local/lib/pkgconfig:/usr/local/lib/pkgconfig
+PKG_CONFIG_PATH = :/usr/local/lib/pkgconfig
 # environment
 DARKNET2_HOME = /home/lume/carmen_lcad/sharedlib/darknet2
 # environment
@@ -139,7 +139,7 @@ VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
 HOME = /home/lume
 # environment
-LD_LIBRARY_PATH = /usr/local/cuda/extras/CUPTI/lib64:/home/lume/carmen_lcad/sharedlib/darknet2/lib:/home/lume/carmen_lcad/sharedlib/darknet/lib:/usr/local/cuda/extras/CUPTI/lib64:/home/lume/carmen_lcad/sharedlib/darknet2/lib:/home/lume/carmen_lcad/sharedlib/darknet/lib::/usr/local/lib:/usr/lib/x86_64-linux-gnu:/usr/lib/i386-linux-gnu/:/usr/lib/libkml:/home/lume/carmen_lcad/lib:/home/lume/carmen_lcad/sharedlib/OpenJAUS/libopenJaus/lib:/home/lume/carmen_lcad/sharedlib/OpenJAUS/libjaus/lib:/home/lume/carmen_lcad/sharedlib/OpenJAUS/ojTorc/lib:/home/lume/carmen_lcad/sharedlib/OpenJAUS/ojIARASim/lib:/home/lume/MAE/lib:/usr/local/cuda/lib64:/home/lume/carmen_lcad/packages_carmen/Porcupine/lib/linux/x86_64:/usr/local/lib:/usr/lib/x86_64-linux-gnu:/usr/lib/i386-linux-gnu/:/usr/lib/libkml:/home/lume/carmen_lcad/lib:/home/lume/carmen_lcad/sharedlib/OpenJAUS/libopenJaus/lib:/home/lume/carmen_lcad/sharedlib/OpenJAUS/libjaus/lib:/home/lume/carmen_lcad/sharedlib/OpenJAUS/ojTorc/lib:/home/lume/carmen_lcad/sharedlib/OpenJAUS/ojIARASim/lib:/home/lume/MAE/lib:/usr/local/cuda/lib64:/home/lume/carmen_lcad/packages_carmen/Porcupine/lib/linux/x86_64
+LD_LIBRARY_PATH = /usr/local/cuda/extras/CUPTI/lib64:/home/lume/carmen_lcad/sharedlib/darknet2/lib:/home/lume/carmen_lcad/sharedlib/darknet/lib::/usr/local/lib:/usr/lib/x86_64-linux-gnu:/usr/lib/i386-linux-gnu/:/usr/lib/libkml:/home/lume/carmen_lcad/lib:/home/lume/carmen_lcad/sharedlib/OpenJAUS/libopenJaus/lib:/home/lume/carmen_lcad/sharedlib/OpenJAUS/libjaus/lib:/home/lume/carmen_lcad/sharedlib/OpenJAUS/ojTorc/lib:/home/lume/carmen_lcad/sharedlib/OpenJAUS/ojIARASim/lib:/home/lume/MAE/lib:/usr/local/cuda/lib64:/home/lume/carmen_lcad/packages_carmen/Porcupine/lib/linux/x86_64
 # environment
 LESSCLOSE = /usr/bin/lesspipe %s %s
 # environment
@@ -149,7 +149,7 @@ VSCODE_CODE_CACHE_PATH = /home/lume/.config/Code/CachedData/3b889b090b5ad5793f52
 # environment
 LOGNAME = lume
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # automatic
 +F = $(notdir $+)
 # environment
@@ -162,8 +162,6 @@ GNOME_DESKTOP_SESSION_ID = this-is-deprecated
 ^D = $(patsubst %/,%,$(dir $^))
 # environment
 LC_TIME = pt_BR.UTF-8
-# environment
-COLORTERM = truecolor
 # default
 MAKE = $(MAKE_COMMAND)
 # default
@@ -171,7 +169,7 @@ MAKECMDGOALS := all
 # environment
 QT_IM_MODULE = ibus
 # environment
-SHLVL = 1
+SHLVL = 0
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # default
@@ -190,8 +188,6 @@ XDG_CURRENT_DESKTOP = Unity
 LC_TELEPHONE = pt_BR.UTF-8
 # default
 MAKE_COMMAND := make
-# environment
-TERM_PROGRAM = vscode
 # default
 .VARIABLES := 
 # automatic
@@ -199,15 +195,13 @@ TERM_PROGRAM = vscode
 # environment
 VSCODE_IPC_HOOK = /run/user/1000/vscode-009dc151-1.69.2-main.sock
 # environment
-PYTHONPATH = /home/lume/carmen_lcad/src/neural_object_tracker/pedestrian_tracker:/home/lume/carmen_lcad/src/neural_object_detector3/pedestrian_tracker:/home/lume/carmen_lcad/src/neural_object_tracker/pedestrian_tracker:/home/lume/carmen_lcad/src/neural_object_detector3/pedestrian_tracker::/home/lume/carmen_lcad/src/voice_interface:/home/lume/carmen_lcad/src/voice_interface
+PYTHONPATH = /home/lume/carmen_lcad/src/neural_object_tracker/pedestrian_tracker:/home/lume/carmen_lcad/src/neural_object_detector3/pedestrian_tracker::/home/lume/carmen_lcad/src/voice_interface
 # makefile
 MAKEFLAGS = pqrR
 # environment
 MFLAGS = -pqrR
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
-# environment
-TERM_PROGRAM_VERSION = 1.69.2
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # environment
@@ -255,11 +249,9 @@ LC_ADDRESS = pt_BR.UTF-8
 # environment
 LANG = C
 # environment
-TERM = xterm-256color
-# environment
-VSCODE_PID = 4118
+VSCODE_PID = 3346
 # variable set hash-table stats:
-# Load=123/1024=12%, Rehash=0, Collisions=21/145=14%
+# Load=119/1024=12%, Rehash=0, Collisions=21/141=15%
 
 # Pattern-specific Variable Values
 
@@ -267,9 +259,9 @@ VSCODE_PID = 4118
 
 # Directories
 
-# . (device 66311, inode 6427069): 27 files, no impossibilities.
+# . (device 66311, inode 6427069): 33 files, no impossibilities.
 
-# 27 files, no impossibilities in 1 directories.
+# 33 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -312,6 +304,7 @@ GNUmakefile:
 #  Failed to be updated.
 
 # files hash-table stats:
+ 
 # Load=6/1024=1%, Rehash=0, Collisions=0/15=0%
 # VPATH Search Paths
 
@@ -319,13 +312,12 @@ GNUmakefile:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 35 / storage = 501 B / avg = 14 B
-# current buf: size = 8162 B / used = 501 B / count = 35 / avg = 14 B
- 
+# strcache buffers: 1 (0) / strings = 41 / storage = 546 B / avg = 13 B
+# current buf: size = 8162 B / used = 546 B / count = 41 / avg = 13 B
 
-# strcache performance: lookups = 38 / hit rate = 7%
+# strcache performance: lookups = 44 / hit rate = 6%
 # hash-table stats:
-# Load=35/8192=0%, Rehash=0, Collisions=1/38=3%
-# Finished Make data base on Thu Aug 11 11:11:22 2022
+# Load=41/8192=1%, Rehash=0, Collisions=1/44=2%
+# Finished Make data base on Mon Aug 22 15:50:03 2022
 
  

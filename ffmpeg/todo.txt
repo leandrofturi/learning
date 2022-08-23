@@ -1,0 +1,2 @@
+atualizar readme.md da ffmpeg
+trabalhar na tag com a camera boa

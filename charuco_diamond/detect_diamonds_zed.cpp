@@ -7,10 +7,11 @@
 
 #include "utils_aruco.hpp"
 
+
 int main(int argc, char *argv[])
 {
-    float squareLength = 0.48; // Square side length (in meters)
-    float markerLength = 0.3;  // Marker side length (in meters)
+    float squareLength = 0.048; // Square side length (in meters)
+    float markerLength = 0.03;  // Marker side length (in meters)
 
     sl::Camera zed;
 
@@ -53,8 +54,6 @@ int main(int argc, char *argv[])
     FileStorage fs("../detector_params.yml", FileStorage::READ);
     readDetectorParameters(fs.root(), detectorParams);
 
-    std::cout << detectorParams->adaptiveThreshConstant << std::endl;
-
     // https://docs.opencv.org/3.4/d9/d6a/group__aruco.html
     cv::Ptr<cv::aruco::Dictionary> dictionary;
     dictionary = cv::aruco::getPredefinedDictionary(cv::aruco::PREDEFINED_DICTIONARY_NAME(0));
@@ -65,6 +64,8 @@ int main(int argc, char *argv[])
               tvecStd = {.0, .0, .0};
     size_t i;
 
+    vector<Vec3d> rvecs, tvecs;
+    size_t count = 0;
     while (zed.grab() == sl::ERROR_CODE::SUCCESS)
     {
         zed.retrieveImage(image_zed, sl::VIEW::LEFT, sl::MEM::CPU, image_size);
@@ -73,14 +74,13 @@ int main(int argc, char *argv[])
         vector<int> markerIds;
         vector<Vec4i> diamondIds;
         vector<vector<Point2f>> markerCorners, chessboardCorners, rejectedMarkers, diamondCorners;
-        vector<Vec3d> rvecs, tvecs;
 
         // detect markers
         cv::aruco::detectMarkers(image, dictionary, markerCorners, markerIds, detectorParams,
                                  rejectedMarkers);
 
         if (markerIds.size() > 0)
-        {
+        {   
             aruco::detectCharucoDiamond(image, markerCorners, markerIds,
                                         squareLength / markerLength, diamondCorners, diamondIds,
                                         camMatrix, distCoeffs);
@@ -135,11 +135,20 @@ int main(int argc, char *argv[])
         sqrt((rvecStd / (int)rvecsize), rvecStd);
         sqrt((tvecStd / (int)rvecsize), tvecStd);
 
-        rvecMean = rvecMean * 57.2958;
-        std::cout << rvecMean << "std: " << rvecStd << std::endl;
+        rvecStd[0] = (rvecStd[0] == rvecStd[0]) ? rvecStd[0] : 0.;
+        rvecStd[1] = (rvecStd[1] == rvecStd[1]) ? rvecStd[1] : 0.;
+        rvecStd[2] = (rvecStd[2] == rvecStd[2]) ? rvecStd[2] : 0.;
 
+        rvecMean = rvecMean * 57.2958;
+        if (++count % 20 == 0)
+        {
+            printf("\x1B[2J\x1B[H");
+            printf("%lf\t%lf\t%lf\n%lf\t%lf\t%lf\n", rvecMean[0], rvecMean[1], rvecMean[2], rvecStd[0], rvecStd[1], rvecStd[2]);
+        }
+
+        cv::resize(image, image, cv::Size(), 0.5, 0.5);
         cv::imshow("out", image);
-        char key = (char)cv::waitKey(1);
+        char key = (char)cv::waitKey(20);
         if (key == 27)
             break;
     }

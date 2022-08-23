@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Aug 18 16:02:10 2022
+# Make data base, printed on Mon Aug 22 15:03:46 2022
 
 # Variables
 
@@ -23,7 +23,6 @@ CARMEN_HOME = /home/lume/carmen_lcad
 # default
 .SHELLFLAGS := -c
 # environment
- 
 XDG_SESSION_CLASS = user
 # environment
 XDG_SESSION_TYPE = x11
@@ -52,7 +51,7 @@ CFLAGS = -Wall -g `pkg-config --cflags opencv` -I/usr/local/cuda/include/ -I/usr
 # environment
 GOOGLE_APPLICATION_CREDENTIALS = /home/lume/credentials/voice_interface_credentials.json
 # environment
-JOURNAL_STREAM = 8:50978
+JOURNAL_STREAM = 8:46002
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # environment
@@ -82,7 +81,7 @@ SYSTEM = linux
 # makefile (from 'Makefile', line 19)
 OBJS = detect_diamonds_zed
 # environment
-MANAGERPID = 2320
+MANAGERPID = 2276
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
@@ -98,7 +97,7 @@ GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
 GJS_DEBUG_OUTPUT = stderr
 # environment
-SESSION_MANAGER = local/lume-h1:@/tmp/.ICE-unix/2588,unix/lume-h1:/tmp/.ICE-unix/2588
+SESSION_MANAGER = local/lume-h1:@/tmp/.ICE-unix/2544,unix/lume-h1:/tmp/.ICE-unix/2544
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -106,7 +105,7 @@ XDG_MENU_PREFIX = gnome-
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = efef528c5ae54344a73fd4057f855317
+INVOCATION_ID = 295e947ccac44341bc2e93b918c0605f
 # makefile (from 'Makefile', line 15)
 LDFLAGS = -lm -pthread `pkg-config --libs opencv` -L/usr/local/cuda/lib64 -lcuda -lcudart -lcublas -lcurand -L/usr/local/zed/lib -lsl_zed
 # default
@@ -118,7 +117,7 @@ XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 4909
+GIO_LAUNCHED_DESKTOP_FILE_PID = 3346
 # automatic
 %F = $(notdir $%)
 # environment
@@ -130,7 +129,7 @@ CUDA_LIBS = /usr/local/cuda/lib64
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 2550
+SSH_AGENT_PID = 2507
 # environment
 PKG_CONFIG_PATH = :/usr/local/lib/pkgconfig
 # environment
@@ -154,13 +153,14 @@ VSCODE_CODE_CACHE_PATH = /home/lume/.config/Code/CachedData/3b889b090b5ad5793f52
 # environment
 LOGNAME = lume
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # automatic
 +F = $(notdir $+)
 # environment
 J2SDKDIR = /usr/lib/jvm/java-17-oracle
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+ 
 # environment
 GNOME_DESKTOP_SESSION_ID = this-is-deprecated
 # automatic
@@ -258,7 +258,7 @@ LC_ADDRESS = pt_BR.UTF-8
 # environment
 LANG = C
 # environment
-VSCODE_PID = 4909
+VSCODE_PID = 3346
 # variable set hash-table stats:
 # Load=124/1024=12%, Rehash=0, Collisions=24/167=14%
 
@@ -268,9 +268,9 @@ VSCODE_PID = 4909
 
 # Directories
 
-# . (device 66311, inode 6296369): 24 files, no impossibilities.
+# . (device 66311, inode 6296369): 23 files, no impossibilities.
 
-# 24 files, no impossibilities in 1 directories.
+# 23 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -296,14 +296,14 @@ all: detect_diamonds_zed clean
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-08-18 16:01:17.932870111
+#  Last modified 2022-08-22 15:00:30.293424412
 #  File has been updated.
 #  Successfully updated.
 
 detect_diamonds_zed: detect_diamonds_zed.cpp dict_4x4.hpp utils_aruco.hpp utils_zed.hpp
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: 'detect_diamonds_zed'
-#  Last modified 2022-08-18 16:01:32.948578673
+#  Last modified 2022-08-22 14:21:44.866942677
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 24):
@@ -312,7 +312,7 @@ detect_diamonds_zed: detect_diamonds_zed.cpp dict_4x4.hpp utils_aruco.hpp utils_
 # Not a target:
 utils_aruco.hpp:
 #  Implicit rule search has been done.
-#  Last modified 2022-08-18 15:39:26.758284073
+#  Last modified 2022-08-18 16:35:12.848679134
 #  File has been updated.
 #  Successfully updated.
 
@@ -338,7 +338,6 @@ clean:
 # automatic
 # @ := clean
 # automatic
- 
 # % := 
 # automatic
 # * := 
@@ -360,14 +359,14 @@ clean:
 # Not a target:
 utils_zed.hpp:
 #  Implicit rule search has been done.
-#  Last modified 2022-08-18 14:15:58.59740654
+#  Last modified 2022-08-18 16:07:37.924274086
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 detect_diamonds_zed.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2022-08-18 16:00:57.589283416
+#  Last modified 2022-08-22 13:51:00.94025734
 #  File has been updated.
 #  Successfully updated.
 
@@ -379,12 +378,12 @@ detect_diamonds_zed.cpp:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 32 / storage = 398 B / avg = 12 B
-# current buf: size = 8162 B / used = 398 B / count = 32 / avg = 12 B
+# strcache buffers: 1 (0) / strings = 31 / storage = 386 B / avg = 12 B
+# current buf: size = 8162 B / used = 386 B / count = 31 / avg = 12 B
 
-# strcache performance: lookups = 49 / hit rate = 34%
+# strcache performance: lookups = 48 / hit rate = 35%
 # hash-table stats:
-# Load=32/8192=0%, Rehash=0, Collisions=3/49=6%
-# Finished Make data base on Thu Aug 18 16:02:10 2022
+# Load=31/8192=0%, Rehash=0, Collisions=3/48=6%
+# Finished Make data base on Mon Aug 22 15:03:46 2022
 
  

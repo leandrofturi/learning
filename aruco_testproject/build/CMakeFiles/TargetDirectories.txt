@@ -1,5 +1,6 @@
 /home/lume/Documents/learning/aruco_testproject/build/CMakeFiles/rebuild_cache.dir
 /home/lume/Documents/learning/aruco_testproject/build/CMakeFiles/edit_cache.dir
+/home/lume/Documents/learning/aruco_testproject/build/CMakeFiles/camera_zed.dir
 /home/lume/Documents/learning/aruco_testproject/build/CMakeFiles/camera_board.dir
 /home/lume/Documents/learning/aruco_testproject/build/CMakeFiles/camera.dir
 /home/lume/Documents/learning/aruco_testproject/build/CMakeFiles/board.dir

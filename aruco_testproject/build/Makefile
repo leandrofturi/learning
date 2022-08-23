@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named camera_zed
+
+# Build rule for target.
+camera_zed: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 camera_zed
+.PHONY : camera_zed
+
+# fast build rule for target.
+camera_zed/fast:
+	$(MAKE) -f CMakeFiles/camera_zed.dir/build.make CMakeFiles/camera_zed.dir/build
+.PHONY : camera_zed/fast
+
+#=============================================================================
 # Target rules for targets named camera_board
 
 # Build rule for target.
@@ -243,6 +256,33 @@ camera_board.cpp.s:
 	$(MAKE) -f CMakeFiles/camera_board.dir/build.make CMakeFiles/camera_board.dir/camera_board.cpp.s
 .PHONY : camera_board.cpp.s
 
+camera_zed.o: camera_zed.cpp.o
+
+.PHONY : camera_zed.o
+
+# target to build an object file
+camera_zed.cpp.o:
+	$(MAKE) -f CMakeFiles/camera_zed.dir/build.make CMakeFiles/camera_zed.dir/camera_zed.cpp.o
+.PHONY : camera_zed.cpp.o
+
+camera_zed.i: camera_zed.cpp.i
+
+.PHONY : camera_zed.i
+
+# target to preprocess a source file
+camera_zed.cpp.i:
+	$(MAKE) -f CMakeFiles/camera_zed.dir/build.make CMakeFiles/camera_zed.dir/camera_zed.cpp.i
+.PHONY : camera_zed.cpp.i
+
+camera_zed.s: camera_zed.cpp.s
+
+.PHONY : camera_zed.s
+
+# target to generate assembly for a file
+camera_zed.cpp.s:
+	$(MAKE) -f CMakeFiles/camera_zed.dir/build.make CMakeFiles/camera_zed.dir/camera_zed.cpp.s
+.PHONY : camera_zed.cpp.s
+
 img.o: img.cpp.o
 
 .PHONY : img.o
@@ -278,6 +318,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... camera_zed"
 	@echo "... camera_board"
 	@echo "... camera"
 	@echo "... board"
@@ -291,6 +332,9 @@ help:
 	@echo "... camera_board.o"
 	@echo "... camera_board.i"
 	@echo "... camera_board.s"
+	@echo "... camera_zed.o"
+	@echo "... camera_zed.i"
+	@echo "... camera_zed.s"
 	@echo "... img.o"
 	@echo "... img.i"
 	@echo "... img.s"

@@ -16,7 +16,7 @@ LDFLAGS += -L/usr/local/zed/lib -lsl_zed
 
 # deps
 DEPS = $(wildcard *.h) $(wildcard *.hpp)
-OBJS = detect_diamonds_zed
+OBJS = create_diamond
 
 all: $(OBJS) clean
 
