@@ -1,31 +1,10 @@
-CC = g++ -std=c++11
-CFLAGS = -Wall -g
-LDFLAGS = -lm -pthread
+all: cmake
 
-# aruco
-CFLAGS += `pkg-config --cflags aruco`
-LDFLAGS += `pkg-config --libs aruco`
-
-# opencv 
-CFLAGS += `pkg-config --cflags opencv`
-LDFLAGS += `pkg-config --libs opencv`
-
-# cuda
-CFLAGS += -I/usr/local/cuda/include/
-LDFLAGS += -L/usr/local/cuda/lib64 -lcuda -lcudart -lcublas -lcurand
-
-# zed
-CFLAGS += -I/usr/local/zed/include
-LDFLAGS += -L/usr/local/zed/lib -lsl_zed
-
-# deps
-DEPS = $(wildcard *.h) $(wildcard *.hpp)
-OBJS = detect
-
-all: $(OBJS) clean
-
-$(OBJS): %: %.cpp $(DEPS)
-	$(CC) $(CFLAGS) -o $@ $< $(CFLAGS) $(LDFLAGS)
+cmake:
+	[ -f build/CMakeCache.txt ] && [ "$$(pwd)" != "$$(grep 'CMAKE_HOME_DIRECTORY:INTERNAL' build/CMakeCache.txt | cut -d '=' -f 2)" ] \
+&& rm -rf build || true
+	mkdir -p build && cd build && cmake ..
+	make -C build
 
 clean:
-	rm -f *.o
+	rm -rf build

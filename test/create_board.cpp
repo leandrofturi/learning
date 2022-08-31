@@ -1,6 +1,4 @@
 #include <iostream>
-#include <opencv2/core.hpp>
-#include <opencv2/highgui.hpp>
 #include <aruco/aruco.h>
 
 
@@ -17,10 +15,8 @@ int main(int argc, char **argv)
         int pixSize = 500;
         int interMarkerDistance = 100;
 
-        // std::vector<int> ids = {1, 2, 3, 4, 5, 6, 7, 8, 0, 0, 0, 0, 0, 0, 0};
+        std::vector<int> ids = {1, 2, 3, 4, 5, 6, 7, 8, 0, 0, 0, 0, 0, 0, 0};
         // std::vector<int> ids = {9, 10, 11, 12, 13, 14, 15, 16, 0, 0, 0, 0, 0, 0, 0};
-        // std::vector<int> ids = {17, 18, 19, 20, 21, 22, 23, 24, 0, 0, 0, 0, 0, 0, 0};
-        std::vector<int> ids = {25, 26, 27, 28, 29, 30, 31, 32, 0, 0, 0, 0, 0, 0, 0};
         ids.resize(XSize * YSize);
 
         aruco::MarkerMap BInfo =

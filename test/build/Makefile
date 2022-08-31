@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lume/Documents/learning/test
+CMAKE_SOURCE_DIR = /home/lume/carmen_lcad/src/aruco
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lume/Documents/learning/test/build
+CMAKE_BINARY_DIR = /home/lume/carmen_lcad/src/aruco/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lume/Documents/learning/test/build/CMakeFiles /home/lume/Documents/learning/test/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lume/carmen_lcad/src/aruco/build/CMakeFiles /home/lume/carmen_lcad/src/aruco/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lume/Documents/learning/test/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lume/carmen_lcad/src/aruco/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,84 +111,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named detect
+# Target rules for targets named arucoest
 
 # Build rule for target.
-detect: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 detect
-.PHONY : detect
+arucoest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 arucoest
+.PHONY : arucoest
 
 # fast build rule for target.
-detect/fast:
-	$(MAKE) -f CMakeFiles/detect.dir/build.make CMakeFiles/detect.dir/build
-.PHONY : detect/fast
+arucoest/fast:
+	$(MAKE) -f CMakeFiles/arucoest.dir/build.make CMakeFiles/arucoest.dir/build
+.PHONY : arucoest/fast
 
-#=============================================================================
-# Target rules for targets named create
+rot_estimation_main.o: rot_estimation_main.cpp.o
 
-# Build rule for target.
-create: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 create
-.PHONY : create
-
-# fast build rule for target.
-create/fast:
-	$(MAKE) -f CMakeFiles/create.dir/build.make CMakeFiles/create.dir/build
-.PHONY : create/fast
-
-create.o: create.cpp.o
-
-.PHONY : create.o
+.PHONY : rot_estimation_main.o
 
 # target to build an object file
-create.cpp.o:
-	$(MAKE) -f CMakeFiles/create.dir/build.make CMakeFiles/create.dir/create.cpp.o
-.PHONY : create.cpp.o
+rot_estimation_main.cpp.o:
+	$(MAKE) -f CMakeFiles/arucoest.dir/build.make CMakeFiles/arucoest.dir/rot_estimation_main.cpp.o
+.PHONY : rot_estimation_main.cpp.o
 
-create.i: create.cpp.i
+rot_estimation_main.i: rot_estimation_main.cpp.i
 
-.PHONY : create.i
-
-# target to preprocess a source file
-create.cpp.i:
-	$(MAKE) -f CMakeFiles/create.dir/build.make CMakeFiles/create.dir/create.cpp.i
-.PHONY : create.cpp.i
-
-create.s: create.cpp.s
-
-.PHONY : create.s
-
-# target to generate assembly for a file
-create.cpp.s:
-	$(MAKE) -f CMakeFiles/create.dir/build.make CMakeFiles/create.dir/create.cpp.s
-.PHONY : create.cpp.s
-
-detect.o: detect.cpp.o
-
-.PHONY : detect.o
-
-# target to build an object file
-detect.cpp.o:
-	$(MAKE) -f CMakeFiles/detect.dir/build.make CMakeFiles/detect.dir/detect.cpp.o
-.PHONY : detect.cpp.o
-
-detect.i: detect.cpp.i
-
-.PHONY : detect.i
+.PHONY : rot_estimation_main.i
 
 # target to preprocess a source file
-detect.cpp.i:
-	$(MAKE) -f CMakeFiles/detect.dir/build.make CMakeFiles/detect.dir/detect.cpp.i
-.PHONY : detect.cpp.i
+rot_estimation_main.cpp.i:
+	$(MAKE) -f CMakeFiles/arucoest.dir/build.make CMakeFiles/arucoest.dir/rot_estimation_main.cpp.i
+.PHONY : rot_estimation_main.cpp.i
 
-detect.s: detect.cpp.s
+rot_estimation_main.s: rot_estimation_main.cpp.s
 
-.PHONY : detect.s
+.PHONY : rot_estimation_main.s
 
 # target to generate assembly for a file
-detect.cpp.s:
-	$(MAKE) -f CMakeFiles/detect.dir/build.make CMakeFiles/detect.dir/detect.cpp.s
-.PHONY : detect.cpp.s
+rot_estimation_main.cpp.s:
+	$(MAKE) -f CMakeFiles/arucoest.dir/build.make CMakeFiles/arucoest.dir/rot_estimation_main.cpp.s
+.PHONY : rot_estimation_main.cpp.s
 
 # Help Target
 help:
@@ -198,14 +158,10 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... detect"
-	@echo "... create"
-	@echo "... create.o"
-	@echo "... create.i"
-	@echo "... create.s"
-	@echo "... detect.o"
-	@echo "... detect.i"
-	@echo "... detect.s"
+	@echo "... arucoest"
+	@echo "... rot_estimation_main.o"
+	@echo "... rot_estimation_main.i"
+	@echo "... rot_estimation_main.s"
 .PHONY : help
 
 

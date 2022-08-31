@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Aug 23 10:42:52 2022
+# Make data base, printed on Tue Aug 30 14:25:59 2022
 
 # Variables
 
@@ -47,11 +47,11 @@ VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupp
 # environment
 _ = /usr/share/code/code
 # makefile (from 'Makefile', line 18)
-CFLAGS = -Wall -g `pkg-config --cflags aruco` `pkg-config --cflags opencv` -I/usr/local/cuda/include/ -I/usr/local/zed/include
+CFLAGS = -Wall -g `pkg-config --cflags aruco` -I/usr/local/cuda/include/ -I/usr/local/zed/include
 # environment
 GOOGLE_APPLICATION_CREDENTIALS = /home/lume/credentials/voice_interface_credentials.json
 # environment
-JOURNAL_STREAM = 8:59457
+JOURNAL_STREAM = 8:40892
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # environment
@@ -78,8 +78,10 @@ DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
 LC_CTYPE = pt_BR.UTF-8
 # environment
 SYSTEM = linux
+# makefile (from 'Makefile', line 23)
+OBJS = detect
 # environment
-MANAGERPID = 2274
+MANAGERPID = 2248
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
@@ -95,7 +97,7 @@ GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
 GJS_DEBUG_OUTPUT = stderr
 # environment
-SESSION_MANAGER = local/lume-h1:@/tmp/.ICE-unix/2543,unix/lume-h1:/tmp/.ICE-unix/2543
+SESSION_MANAGER = local/lume-h1:@/tmp/.ICE-unix/2519,unix/lume-h1:/tmp/.ICE-unix/2519
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -103,9 +105,9 @@ XDG_MENU_PREFIX = gnome-
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = a08524b92fd14da4b3267f06592a75b8
+INVOCATION_ID = 2af23d170b7d49bfbaa35d6d1edb77db
 # makefile (from 'Makefile', line 19)
-LDFLAGS = -lm -pthread `pkg-config --libs aruco` `pkg-config --libs opencv` -L/usr/local/cuda/lib64 -lcuda -lcudart -lcublas -lcurand -L/usr/local/zed/lib -lsl_zed
+LDFLAGS = -lm -pthread -laruco -L/usr/local/cuda/lib64 -lcuda -lcudart -lcublas -lcurand -L/usr/local/zed/lib -lsl_zed
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -115,7 +117,7 @@ XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 4909
+GIO_LAUNCHED_DESKTOP_FILE_PID = 4798
 # automatic
 %F = $(notdir $%)
 # environment
@@ -127,7 +129,7 @@ CUDA_LIBS = /usr/local/cuda/lib64
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 2506
+SSH_AGENT_PID = 2482
 # environment
 PKG_CONFIG_PATH = :/usr/local/lib/pkgconfig
 # environment
@@ -255,9 +257,9 @@ LC_ADDRESS = pt_BR.UTF-8
 # environment
 LANG = C
 # environment
-VSCODE_PID = 4909
+VSCODE_PID = 4798
 # variable set hash-table stats:
-# Load=123/1024=12%, Rehash=0, Collisions=21/170=12%
+# Load=124/1024=12%, Rehash=0, Collisions=24/167=14%
 
 # Pattern-specific Variable Values
 
@@ -265,9 +267,9 @@ VSCODE_PID = 4909
 
 # Directories
 
-# . (device 66311, inode 10225294): 17 files, no impossibilities.
+# . (device 66311, inode 10225294): 14 files, no impossibilities.
 
-# 17 files, no impossibilities in 1 directories.
+# 14 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -275,15 +277,49 @@ VSCODE_PID = 4909
 
 # Files
 
-all:
+all: detect clean
 #  Command line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/3=0%
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-30 14:25:54.898699099
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+detect.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-30 14:18:23.844647708
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+clean:
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: ''
 #  File does not exist.
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # automatic
-# @ := all
+# @ := clean
 # automatic
 # % := 
 # automatic
@@ -299,52 +335,34 @@ all:
 # automatic
 # ? := 
 # variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=1/14=7%
-#  recipe to execute (from 'Makefile', line 25):
-	g++ -c diamond.cpp dmain.cpp $(CFLAGS)
-	g++ -o main *.o $(CFLAGS) $(LDFLAGS)
-	rm *.o
-
-# Not a target:
-.SUFFIXES:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-Makefile:
-#  Implicit rule search has been done.
-#  Last modified 2022-08-23 10:41:29.710780749
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-.DEFAULT:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-clean:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+# Load=8/32=25%, Rehash=0, Collisions=1/11=9%
 #  recipe to execute (from 'Makefile', line 31):
 	rm -f *.o
 
+detect: detect.cpp
+#  Implicit rule search has not been done.
+#  Implicit/static pattern stem: 'detect'
+#  Last modified 2022-08-30 14:19:33.859437147
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 28):
+	$(CC) $(CFLAGS) -o $@ $< $(CFLAGS) $(LDFLAGS)
+
 # files hash-table stats:
-# Load=5/1024=0%, Rehash=0, Collisions=0/17=0%
+# Load=7/1024=1%, Rehash=0, Collisions=0/24=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 23 / storage = 267 B / avg = 11 B
-# current buf: size = 8162 B / used = 267 B / count = 23 / avg = 11 B
+ 
+# strcache buffers: 1 (0) / strings = 22 / storage = 209 B / avg = 9 B
+# current buf: size = 8162 B / used = 209 B / count = 22 / avg = 9 B
 
-# strcache performance: lookups = 31 / hit rate = 25%
+# strcache performance: lookups = 36 / hit rate = 38%
 # hash-table stats:
-# Load=23/8192=0%, Rehash=0, Collisions=1/31=3%
-# Finished Make data base on Tue Aug 23 10:42:52 2022
+# Load=22/8192=0%, Rehash=0, Collisions=1/36=3%
+# Finished Make data base on Tue Aug 30 14:25:59 2022
 
  
