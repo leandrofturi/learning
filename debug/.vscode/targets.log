@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Aug 29 10:07:10 2022
+# Make data base, printed on Fri Aug 26 17:03:30 2022
 
 # Variables
 
@@ -41,7 +41,7 @@ GDMSESSION = ubuntu
 # environment
 XMODIFIERS = @im=ibus
 # makefile
-CURDIR := /home/lume/Documents/learning
+CURDIR := /home/lume/Documents/learning/debug
 # makefile
 SHELL = /bin/sh
 # environment
@@ -51,7 +51,7 @@ _ = /usr/share/code/code
 # environment
 GOOGLE_APPLICATION_CREDENTIALS = /home/lume/credentials/voice_interface_credentials.json
 # environment
-JOURNAL_STREAM = 8:40892
+JOURNAL_STREAM = 8:53458
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # environment
@@ -79,7 +79,7 @@ LC_CTYPE = pt_BR.UTF-8
 # environment
 SYSTEM = linux
 # environment
-MANAGERPID = 2248
+MANAGERPID = 2290
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
@@ -95,7 +95,7 @@ GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
 GJS_DEBUG_OUTPUT = stderr
 # environment
-SESSION_MANAGER = local/lume-h1:@/tmp/.ICE-unix/2519,unix/lume-h1:/tmp/.ICE-unix/2519
+SESSION_MANAGER = local/lume-h1:@/tmp/.ICE-unix/2557,unix/lume-h1:/tmp/.ICE-unix/2557
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -103,7 +103,7 @@ XDG_MENU_PREFIX = gnome-
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = 2af23d170b7d49bfbaa35d6d1edb77db
+INVOCATION_ID = d822927ac08a4099b305bbb4ecdcd31b
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -113,19 +113,19 @@ XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 4798
+GIO_LAUNCHED_DESKTOP_FILE_PID = 3892
 # automatic
 %F = $(notdir $%)
 # environment
 DISPLAY = :1
 # environment
-PWD = /home/lume/Documents/learning
+PWD = /home/lume/Documents/learning/debug
 # environment
 CUDA_LIBS = /usr/local/cuda/lib64
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 2482
+SSH_AGENT_PID = 2520
 # environment
 PKG_CONFIG_PATH = :/usr/local/lib/pkgconfig
 # environment
@@ -149,7 +149,7 @@ VSCODE_CODE_CACHE_PATH = /home/lume/.config/Code/CachedData/3b889b090b5ad5793f52
 # environment
 LOGNAME = lume
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # automatic
 +F = $(notdir $+)
 # environment
@@ -249,7 +249,7 @@ LC_ADDRESS = pt_BR.UTF-8
 # environment
 LANG = C
 # environment
-VSCODE_PID = 4798
+VSCODE_PID = 3892
 # variable set hash-table stats:
 # Load=119/1024=12%, Rehash=0, Collisions=21/141=15%
 
@@ -259,9 +259,9 @@ VSCODE_PID = 4798
 
 # Directories
 
-# . (device 66311, inode 6296490): 11 files, no impossibilities.
+# . (device 66311, inode 6298880): 5 files, no impossibilities.
 
-# 11 files, no impossibilities in 1 directories.
+# 5 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -279,7 +279,6 @@ all:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
- 
 #  File does not exist.
 #  File has been updated.
 #  Failed to be updated.
@@ -294,6 +293,7 @@ makefile:
 # Not a target:
 .DEFAULT:
 #  Implicit rule search has not been done.
+ 
 #  Modification time never checked.
 #  File has not been updated.
 
@@ -312,12 +312,12 @@ GNUmakefile:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 19 / storage = 172 B / avg = 9 B
-# current buf: size = 8162 B / used = 172 B / count = 19 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 13 / storage = 124 B / avg = 9 B
+# current buf: size = 8162 B / used = 124 B / count = 13 / avg = 9 B
 
-# strcache performance: lookups = 22 / hit rate = 13%
+# strcache performance: lookups = 16 / hit rate = 18%
 # hash-table stats:
-# Load=19/8192=0%, Rehash=0, Collisions=1/22=5%
-# Finished Make data base on Mon Aug 29 10:07:10 2022
+# Load=13/8192=0%, Rehash=0, Collisions=1/16=6%
+# Finished Make data base on Fri Aug 26 17:03:30 2022
 
  

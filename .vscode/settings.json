@@ -50,6 +50,10 @@
         "utility": "cpp",
         "list": "cpp",
         "set": "cpp",
-        "iomanip": "cpp"
+        "iomanip": "cpp",
+        "regex": "cpp",
+        "memory_resource": "cpp",
+        "shared_mutex": "cpp",
+        "stat.h": "c"
     }
 }

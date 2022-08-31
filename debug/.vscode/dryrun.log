@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/lume/Documents/learning/debug'
+make: Leaving directory '/home/lume/Documents/learning/debug'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+
